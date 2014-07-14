@@ -1,9 +1,18 @@
 package main
 
-import "fmt"
+import (
+    "github.com/etsy/statsd/examples/go"
+    "fmt"
+    )
 
 func main() {
 
+    // Create a new StatsD connection
+    host := "localhost"
+    port := 8125
+    client := statsd.New(host, port)
+
+    
 
 
     sum := 0
