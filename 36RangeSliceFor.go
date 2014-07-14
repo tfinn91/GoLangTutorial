@@ -9,11 +9,13 @@ func main() {
 
 	fmt.Printf("a == %d\n", a)
 
-	newA := make([]int, len(a), (cap(a)*2))
+	newA := make([]int, len(a)*2, (cap(a)*2))
 
 	for i := range a {
 		newA[i] = a[i]
 		
 	}
+
+	fmt.Printf("newA == %d\n", newA)
 
 }
