@@ -2,11 +2,12 @@ package main
 
 import (
 	"github.com/etsy/statsd/examples/go"
+	"time"
 )
 
 func main() {
 	// Record a start time
-	//t1 := time.Now()
+	t1 := time.Now()
 
 	// Create a new StatsD connection
 	host := "localhost"
@@ -25,9 +26,9 @@ func main() {
 
 
 	// Record an end time
-	//t2 := time.Now()
+	t2 := time.Now()
 
 	// Submit timing information
-	//duration := int64(t2.Sub(t1) / time.Millisecond)
-	//client.Timing("stat.timer", duration)
+	duration := int64(t2.Sub(t1) / time.Millisecond)
+	client.Timing("stat.timer", duration)
 }
